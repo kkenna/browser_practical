@@ -13,6 +13,7 @@ The locations of all source files and the preparation of materials for the assig
 ```{bash}
 curl -O https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes
 curl -s https://personal.broadinstitute.org/bjames/AD_snATAC/MFC/bigWig_TSS6/ \
+| grep nonAD \
 | grep -oE 'href="[^"]+\.bw"' \
 | cut -d'"' -f2 \
 | while read file
